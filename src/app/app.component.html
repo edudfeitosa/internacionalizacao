@@ -1,0 +1,37 @@
+<app-header [titulo]="recursos.Titulo"></app-header>
+
+<div class="content">
+  <h2>{{ recursos.DataAtual }} {{ dataAtual | date:'fullDate' }}</h2>
+  <p>{{ recursos.Descricao }}</p>
+
+  <form [formGroup]="formCadastro">
+
+    <div class="linha">
+      <div class="titulo-input">{{ recursos.Nome }}</div>
+      <input formControlName="primeiroNome" [placeholder]="recursos.Nome" />
+      <div *ngIf="formCadastro.controls['primeiroNome'].errors" class="erro-input">
+        {{ recursos.PrimeiroNomeObrigatorio }}
+      </div>
+    </div>
+
+    <div class="linha">
+      <div class="titulo-input">{{ recursos.Sobrenome }}</div>
+      <input formControlName="sobrenome" [placeholder]="recursos.Sobrenome" />
+      <div *ngIf="formCadastro.controls['sobrenome'].errors" class="erro-input">
+        {{ recursos.SobrenomeObrigatorio }}
+      </div>
+    </div>
+
+    <div class="linha">
+      <div class="titulo-input">{{ recursos.Idade }}</div>
+      <input formControlName="idade" [placeholder]="recursos.Idade" />
+      <div *ngIf="formCadastro.controls['idade'].errors" class="erro-input">
+        {{ recursos.IdadeObrigatoria }}
+      </div>
+    </div>
+
+    <button>{{ recursos.BotaoCriar }}</button>
+
+  </form>
+
+</div>

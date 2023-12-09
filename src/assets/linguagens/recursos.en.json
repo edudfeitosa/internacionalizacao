@@ -1,0 +1,12 @@
+{
+  "Titulo": "Creating New User",
+  "DataAtual": "Today is",
+  "Descricao": "Fields marked with * are mandatory",
+  "Nome": "First Name",
+  "Sobrenome": "Last Name",
+  "Idade": "Age",
+  "BotaoCriar": "Create",
+  "IdadeObrigatoria": "Age is required",
+  "PrimeiroNomeObrigatorio": "First name is required",
+  "SobrenomeObrigatorio": "Last name is required"
+}

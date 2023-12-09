@@ -1,0 +1,61 @@
+@mixin estilos-informacoes-input($cor, $margem-inferior) {
+  font-size: 0.75rem;
+  font-size: 0.75rem;
+  color: $cor;
+  margin-bottom: $margem-inferior;
+  font-weight: 700;
+}
+
+* {
+  padding: 0;
+  margin: 0
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.content {
+  position: relative;
+  width: 1200px;
+  margin: auto;
+}
+
+h1, h2 {
+  color: #666;
+  letter-spacing: -1px;
+}
+
+p, .linha {
+  margin: 20px 0;
+}
+
+.titulo-input {
+  @include estilos-informacoes-input(#999, 5px)
+}
+
+.erro-input {
+  @include estilos-informacoes-input(#f00, 0)
+}
+
+input {
+  width: 500px;
+  padding: 15px;
+  border: 1px solid #999;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+button {
+  width: 100px;
+  text-align: center;
+  padding: 15px;
+  font-size: 1rem;
+  border: 1px solid #999;
+  border-radius: 5px;
+  margin-top: 10px;
+  color: #666;
+  font-weight: 700;
+  cursor: pointer;
+}

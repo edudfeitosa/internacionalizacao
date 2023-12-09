@@ -1,0 +1,40 @@
+header {
+  width: 100%;
+  background-color: #f1f1f1;
+  border-bottom: 5px solid #999;
+  margin-bottom: 20px;
+  
+  .content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+
+    .bandeiras {
+      width: 300px;
+      height: 60px;
+      font-weight: 700;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 10px;
+      
+      .bandeira {
+        font-size: 0.75rem;
+        color: #999;
+        display: flex;
+        flex-direction: column;
+        justify-content:space-between;
+        align-items: center;
+        cursor: pointer;
+        
+        img {
+          width: 50px;
+        }
+
+      }
+      
+    }
+
+  }
+
+}
