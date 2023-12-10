@@ -20,9 +20,9 @@ Para edição do código, será necessário um editor de sua escolha.
 #### 1.0.0
 Configuração inicial e estruturação do projeto
 
-## Copyright © 2023 / Eduardo Feitosa
+## Desenvolvido por Eduardo Feitosa
 
-O código presente no projeto é para estudos e demonstração de possibilidades no desenvolvimento, e apenas pessoas autorizadas poderão acessá-lo, utilizá-lo e alterá-lo.
+O código presente no projeto é para estudos e demonstração de possibilidades no desenvolvimento.
 
 [git-link]: https://git-scm.com
 [node-link]: https://nodejs.org/en/

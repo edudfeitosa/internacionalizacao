@@ -1,29 +1,62 @@
-import { TestBed } from '@angular/core/testing';
+import { TestBed, ComponentFixture } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HeaderComponent } from './componentes/header/header.component'
 
-describe('AppComponent', () => {
-  beforeEach(() => TestBed.configureTestingModule({
-    imports: [RouterTestingModule],
-    declarations: [AppComponent]
-  }));
+describe(AppComponent.name, () => {
+  let component: AppComponent;
+  let fixture: ComponentFixture<AppComponent>;
 
-  it('should create the app', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app).toBeTruthy();
-  });
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      imports: [
+        RouterTestingModule,
+        ReactiveFormsModule
+      ],
+      declarations: [
+        AppComponent,
+        HeaderComponent
+      ]
+    });
 
-  it(`should have as title 'internacionalizacao'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('internacionalizacao');
-  });
-
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
+    fixture = TestBed.createComponent(AppComponent);
+    component = fixture.componentInstance;
     fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('internacionalizacao app is running!');
+  });
+
+  it('deve renderizar o componente realizando todos os imports necessários', () => {
+    expect(component).toBeTruthy();
+  });
+
+  it('deve criar o form', () => {
+    expect(component.formCadastro).toBeDefined();
+  });
+
+  it('deve validar o campo primeiroNome', () => {
+    const form = component.formCadastro;
+    const firstNameControl = form.get('primeiroNome');
+    firstNameControl?.setValue('');
+    expect(firstNameControl?.hasError('erro')).toBe(true);
+    firstNameControl?.setValue('John');
+    expect(firstNameControl?.hasError('erro')).toBe(false);
+  });
+
+  it('deve validar o campo sobrenome', () => {
+    const form = component.formCadastro;
+    const lastNameControl = form.get('sobrenome');
+    lastNameControl?.setValue('');
+    expect(lastNameControl?.hasError('erro')).toBe(true);
+    lastNameControl?.setValue('Doe');
+    expect(lastNameControl?.hasError('erro')).toBe(false);
+  });
+
+  it('deve validar o campo idade', () => {
+    const form = component.formCadastro;
+    const ageControl = form.get('idade');
+    ageControl?.setValue('');
+    expect(ageControl?.hasError('erro')).toBe(true);
+    ageControl?.setValue(25);
+    expect(ageControl?.hasError('erro')).toBe(false);
   });
 });

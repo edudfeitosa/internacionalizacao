@@ -15,7 +15,7 @@ describe('HeaderComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('deve renderizar o componente realizando todos os imports necessários', () => {
     expect(component).toBeTruthy();
   });
 });
