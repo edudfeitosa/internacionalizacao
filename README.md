@@ -1,27 +1,30 @@
-# Internacionalizacao
+# Internacionalização
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.0.
+Está aplicação foi desenvolvida como estudo para demostrar uma das formas de globalizar e internacionalizar uma aplicação em Angular
 
-## Development server
+## Pré-requisitos
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas: [Git][git-link], [Node.js][node-link] e [Angular CLI][angular-cli].
+Para edição do código, será necessário um editor de sua escolha.
 
-## Code scaffolding
+## Rodando o projeto
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1. Clone este repositório
+2. Acesse o diretório do projeto no terminal/cmd (/internacionalizacao)
+3. Instale as dependências (npm install)
+4. Execute a aplicação localmente em modo de desenvolvimento (npm run start)
+5. O servidor iniciará na porta 4200 (acesse [http://localhost:4200][localhost-link])
 
-## Build
+## Versionamentos
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+#### 1.0.0
+Configuração inicial e estruturação do projeto
 
-## Running unit tests
+## Copyright © 2023 / Eduardo Feitosa
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+O código presente no projeto é para estudos e demonstração de possibilidades no desenvolvimento, e apenas pessoas autorizadas poderão acessá-lo, utilizá-lo e alterá-lo.
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+[git-link]: https://git-scm.com
+[node-link]: https://nodejs.org/en/
+[angular-cli]: https://angular.io/cli
+[localhost-link]: http://localhost:4200
